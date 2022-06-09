@@ -1,0 +1,44 @@
+* {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+h1 {
+    background-color: rgb(114, 114, 114);color: rgb(255, 255, 255);font-size: 2.5em;
+text-align: center;padding-top: 12px;padding-bottom: 12px;padding-left: 10px;
+}
+div {
+background-color: rgb(114, 114, 114);
+color: rgb(255, 255, 255);
+font-size: 2.5em;
+text-align: center;
+padding-top: 12px;
+padding-bottom: 12px;
+padding-left: 10px;
+}
+button {
+background-color: rgb(115, 115, 115);
+border: none;
+}
+button:hover{
+background-color: rgb(95, 95, 95);
+}
+button:click{
+background-color: rgb(59, 59, 59);
+}
+.expanded {
+    animation: slidein 1s;
+    animation-fill-mode: forwards;  
+}
+.unexpanded {
+animation: slidein 1s;
+animation-direction: reverse;
+}
+@keyframes slidein {
+    0% {
+        height: 60px;
+    }
+    100% {
+        height: 300px;
+    }
+}

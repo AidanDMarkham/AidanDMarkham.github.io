@@ -5,7 +5,7 @@ function ExtendSection(section) {
         document.getElementById("extendo").parentElement.classList.add("expanded");
         document.getElementById("extendo").parentElement.classList.remove("unexpanded");
     } else {
-        console.log("unextended section");
+        console.log("Unextended section" + section);
         document.getElementById("extendo").parentElement.classList.add("unexpanded");
         document.getElementById("extendo").parentElement.classList.remove("expanded");
     }
