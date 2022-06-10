@@ -1,13 +1,14 @@
-var isExtended = false;
-function ExtendSection(section) {
-    if (!isExtended) {
-        console.log("Extending Section" + section);
-        document.getElementById("extendo").parentElement.classList.add("expanded");
-        document.getElementById("extendo").parentElement.classList.remove("unexpanded");
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
     } else {
-        console.log("Unextended section" + section);
-        document.getElementById("extendo").parentElement.classList.add("unexpanded");
-        document.getElementById("extendo").parentElement.classList.remove("expanded");
+      content.style.display = "block";
     }
-    isExtended = !isExtended;
+  });
 }
